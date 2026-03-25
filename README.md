@@ -15,7 +15,7 @@ The install script automatically installs the ```vim-plug``` utility for install
 In order to install the specified plugins, run ```vim ~/.vimrc``` and then install the plugins with 
 
 ```bash
-    :PlugInstall
+:PlugInstall
 ```
 
 and then source the files with ```source .vimrc```.
@@ -24,7 +24,7 @@ You will also need a Nerd Font compatible font for devicons to show up properly.
 I like using the JetBrainsMono font which can be installed and placed in the ```~/.fonts``` directory using 
 
 ```bash
-    curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
 
 mkdir ~/.fonts/
 tar -xvf JetBrainsMono.tar.xz -C ~/.fonts/

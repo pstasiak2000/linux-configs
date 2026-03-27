@@ -14,6 +14,7 @@ call plug#begin()
 " Declare the list of plugins
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
 Plug 'rstacruz/vim-closer'
 

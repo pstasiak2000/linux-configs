@@ -17,4 +17,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 cp -r vim/spell	~/.vim/
 
 # Generate a link from ini.vim to .vimrc
-ln ~/.vim/ini.vim ~/.vimrc 
+ln -s ~/.vim/ini.vim ~/.vimrc 

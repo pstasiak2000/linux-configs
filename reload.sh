@@ -13,5 +13,5 @@ cp -r vim/spell	~/.vim/
 
 # re-generate a link from ini.vim to .vimrc just in case
 rm ~/.vimrc 
-ln ~/.vim/ini.vim ~/.vimrc 
+ln -s ~/.vim/ini.vim ~/.vimrc 
 

@@ -7,7 +7,10 @@ set textwidth=0
 set wrapmargin=0
 set tabstop=4
 set shiftwidth=4
- 
+
+" Set line numbers
+set number
+
 " Plugin directory is optional
 call plug#begin()
 

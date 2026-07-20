@@ -35,8 +35,8 @@ set encoding=UTF-8
 
 call plug#end()
 
-autocmd ColorScheme janah highlight Normal ctermbg=235
-colorscheme janah
+" autocmd ColorScheme janah highlight Normal ctermbg=235
+" colorscheme janah
 
 " Automatically launch NerdTree when entering vim
 " autocmd VimEnter * NERDTree | wincmd p
@@ -51,7 +51,9 @@ filetype plugin indent on
 syntax enable
 
 
-let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_viewer = 'mupdf'
+let g:vimtex_view_automatic = 1
+let g:vimtex_view_method = 'mupdf'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@ter'
 
 let g:WebDevIconsUnicodeDecorateFileNodes = 1

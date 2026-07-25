@@ -4,3 +4,5 @@ In the fastfetch config files, need to create a script that will select the corr
 
 Do the same configurations for hypr
 Implement the installation of hypr configs
+Install the starship toml file
+Update the .bashrc file to launch starship and fastfetch

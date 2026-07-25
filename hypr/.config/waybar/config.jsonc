@@ -1,0 +1,191 @@
+{
+    "layer": "top",
+    "position": "top",
+    //"mode": "dock",
+    "exclusive": true,
+    "passtrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        // "cpu",
+        // "memory",
+        "hyprland/workspaces"
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+		"tray",
+//		"cava",
+        // "custom/language",
+        "pulseaudio",
+        "battery",
+//        "custom/weather",
+		"network",
+        "clock"
+    ],
+
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0"
+          },
+          "sort-by-number": true
+    },
+    // "cpu": {
+    //     "interval": 10,
+    //     "format": " {}%",
+    //     "max-length": 10,
+    //     "on-click": ""
+    // },
+    // "memory": {
+    //     "interval": 30,
+    //     "format": " {}%",
+    //     "format-alt":" {used:0.1f}G",
+    //     "max-length": 10
+    // },
+    //"custom/updates": {
+    //    "exec": "(paru -Qua) | wc -l",
+    //    "interval": 7200,
+    //    "format": " {}"
+    //},
+    // "custom/language": {
+    //     "exec": "cat /tmp/kb_layout",
+    //     "interval": 3,
+    //     "format": " {}",
+    //     "tooltip": false
+    // },
+//    "custom/weather" : {
+//        "tooltip" : true,
+//        "format" : "{}",
+//        "restart-interval" : 300,
+//        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+//        "return-type" : "json"
+//    },
+    "tray": {
+        "icon-size": 14,
+        "tooltip": false,
+        "spacing": 10
+    },
+	"cava": {
+		"framerate": 30,
+		"autosens": 0,
+		"sensitivity": 1,
+		"bars": 30,
+		"method": "pipewire",
+		"source": "auto",
+		"stereo": true,
+		"reverse": false,
+		"bar_delimiter": 0,
+		"monstercat": true,
+		"waves": true,
+		"noise_reduction": 0.77,
+		"input_delay": 2,
+		"hide_on_silence": true,
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		]
+	},
+"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰂄 {capacity}%",
+		"format-full": "󰁹 100%",
+		"format-icons": [
+			"󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
+		],
+		"tooltip-format": "{timeTo} remaining\n{power}W"
+	},
+	"network": {
+		"interface": "wlan0",
+		"interval": 5,
+
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-linked": "󰈀",
+		"format-disconnected": "󰤭",
+		"format-disabled": "󰤭",
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"on-click":"kitty --hold nmtui",
+		"tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+		"tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
+		"tooltip-format-disconnected": "Disconnected",
+		"menu": "on-click-right",
+		"menu-file": "~/.config/waybar/network-menu.ui",
+		"menu-actions": {
+			"speedtest": "kitty --hold speedtest"
+		}
+	},
+    "clock": {
+        "format":"<b>󰥔 {:%H:%M 󰃭 %d/%m}</b>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+	"bluetooth": {
+		"format": "󰂲",
+		"format-on": "󰂯",
+		"format-connected": "󰂱",
+		"format-disabled": "󰂲",
+		"tooltip-format": "{controller_alias}",
+		"tooltip-format-connected": "{device_alias}\nBattery: {device_battery_percentage}%",
+		"on-click": "blueman-manager"
+},
+	"pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "tooltip": false,
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭 Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    }
+}

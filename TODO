@@ -1,0 +1,6 @@
+In the fastfetch config files, need to create a script that will select the correct logo of the linux environment that I am using for fast-fetch.
+	-> Also need to download the logos of maybe one other DE if I can be bothered like Debian since it is the only one that I am using.
+
+
+Do the same configurations for hypr
+Implement the installation of hypr configs

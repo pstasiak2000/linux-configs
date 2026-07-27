@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+### The input parameter is the local directory of the git repository
+### i.e use ./install $(git rev-parse --showtoplevel) to run this command
+
+
 DIR="kitty"
 FILE="kitty.conf"
 

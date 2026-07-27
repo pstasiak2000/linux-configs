@@ -3,7 +3,7 @@
 ####### User defined symbols #### 
 
 format = """
-$os $all$username$hostname$character
+$os $all$username$character
 """
 
 [username]

@@ -1,9 +1,37 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-### User defined symbols #### 
+####### User defined symbols #### 
 
+format = """
+$os $all$username$hostname$character
+"""
 
-###
+[username]
+show_always = true
+format = "[$user](bold yellow)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[os]
+disabled = false
+format = "[ $symbol](bold #333333 bg:#DDDDDD)[](bold fg:#DDDDDD)"
+
+#######################################
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
 
 [aws]
 symbol = " "

@@ -17,6 +17,7 @@ BASE_PACKAGES=(
 TERMINAL_PACKAGES=(
 	kitty
 	starship
+    bash-completion	
 	lsd
 	eza
 	fzf
@@ -138,5 +139,9 @@ echo "✅ All required packages are installed."
 
 
 
-
-
+########################################
+# Set-up packages (sourcing etc.) 
+########################################
+echo
+source /usr/share/bash-completion/bash_completion 
+echo "Package set up complete!"

@@ -15,7 +15,6 @@ BASE_PACKAGES=(
 )
 
 TERMINAL_PACKAGES=(
-	kitty
 	starship
     bash-completion	
 	lsd

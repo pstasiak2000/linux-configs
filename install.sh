@@ -17,11 +17,6 @@ echo "Installing system packages..."
 ./packages.sh
 echo ""
 
-### Generate ssh keys if needed and set-up github to pull from repository
-./scripts/configure_ssh.sh
-./scripts/configure_github.sh
-
-
 ### Installing tools for archlinux based systems
 if ["$OS_NAME" = "arch"]; then
 	echo "Running arch packages installation script"
@@ -48,9 +43,13 @@ for dir in "$CONFIG_DIR"/*/; do
     fi
 done
 
+./scripts/configure_fzf.sh
+
 echo "Installing bash aliases"
 cp .bash_aliases ~/
+cat .bash_include >> ~/.bashrc
 echo ""
+
 
 #################################
 #### <<<< VIM <<<<

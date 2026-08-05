@@ -1,0 +1,6 @@
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+
+eval "$(fzf --bash)"
+eval "$(starship init bash)"

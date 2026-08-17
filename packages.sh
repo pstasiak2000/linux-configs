@@ -16,6 +16,7 @@ BASE_PACKAGES=(
 
 TERMINAL_PACKAGES=(
 	starship
+	kitty
     bash-completion	
 	lsd
 	eza
